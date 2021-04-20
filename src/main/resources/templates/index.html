@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<a href="/createProduct">CLICK ME FAM</a>
+
+<div th:each="product : ${products}">
+    <div>
+        <p th:text="${'Name: ' + product.getName() + ' - ' + 'Price: ' + product.getPrice() + ' - ' + 'Description: ' + product.description.getDescription()}"> : </p>
+        <a th:href="@{/updateProduct(id=${product.getId()})}">UPDATE DIS BITCH</a>
+    </div>
+</div>
+
+</body>
+</html>

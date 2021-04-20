@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>updateside</title>
+</head>
+<body>
+
+<form name="updateProduct" action="/updateProduct" method="post">
+    <div>
+        <label>Character Name</label>
+        <input type="text" name="productName" required th:value="${product.getName()}">
+    </div>
+
+    <div>
+        <label>Character Class</label>
+        <input type="number" name="productPrice" required th:value="${product.getPrice()}">
+    </div>
+
+    <div>
+        <label>Character Class</label>
+        <input type="text" name="productDescription" required th:value="${product.description.getDescription()}">
+    </div>
+
+    <button type="submit">Create</button>
+</form>
+
+</body>
+</html>
